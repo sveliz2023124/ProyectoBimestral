@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "8155f8ec-9d6f-47e3-867d-7a854d543b20",
+		"name": "CRUD_TALLER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956961"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "surname",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "phone",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "NIT",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "profilePicture",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sebastian",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Veliz",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sveliz",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sveliz-2023421@kinal.edu.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sveliz1!",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "54899860",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/register",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userLogin",
+							"value": "sveliz",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sveliz1!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/login",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/67b29a1571bd46732bb0c6b3",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"67b29a1571bd46732bb0c6b3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Eduardo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/67b29a1571bd46732bb0c6b3",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"67b29a1571bd46732bb0c6b3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/67b29a1571bd46732bb0c6b3",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"67b29a1571bd46732bb0c6b3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"category",
+						"67b2a050cdf46ea0096c95af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Muebles",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/categories/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"categories",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Comida",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"category",
+						"67b2a050cdf46ea0096c95af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"category",
+						"67b2a050cdf46ea0096c95af"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
