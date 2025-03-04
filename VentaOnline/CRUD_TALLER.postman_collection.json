@@ -12,43 +12,8 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "name",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "surname",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "username",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "email",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "password",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "phone",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "NIT",
-						"value": "",
-						"type": "text"
-					},
-					{
-						"key": "profilePicture",
-						"value": "",
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
 						"type": "text"
 					}
 				],
@@ -57,73 +22,50 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Sebastian",
+							"value": "Oliver",
 							"type": "text"
 						},
 						{
 							"key": "surname",
-							"value": "Veliz",
+							"value": "Lopez",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "sveliz",
+							"value": "olopez",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "sveliz-2023421@kinal.edu.gt",
+							"value": "olopez-2020123@kinal.edu.gt",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Sveliz1!",
+							"value": "Olopez1!",
 							"type": "text"
 						},
 						{
 							"key": "phone",
-							"value": "54899860",
+							"value": "56654172",
 							"type": "text"
 						},
 						{
 							"key": "role",
-							"value": "ADMIN",
+							"value": "CLIENT",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:2636/register",
+					"raw": "localhost:2636/user/register",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
+						"user",
 						"register"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetUser",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "localhost:2636/",
-					"host": [
-						"localhost"
-					],
-					"port": "2636",
-					"path": [
-						""
 					]
 				}
 			},
@@ -144,19 +86,52 @@
 						},
 						{
 							"key": "password",
-							"value": "Sveliz1!",
+							"value": "Admin123?",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:2636/login",
+					"raw": "localhost:2636/user/login",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
+						"user",
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"user",
+						""
 					]
 				}
 			},
@@ -169,18 +144,19 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:2636/67b29a1571bd46732bb0c6b3",
+					"raw": "localhost:2636/user/67c60ba5505dc740d505c071",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
-						"67b29a1571bd46732bb0c6b3"
+						"user",
+						"67c60ba5505dc740d505c071"
 					]
 				}
 			},
@@ -193,7 +169,7 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
@@ -202,19 +178,33 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Eduardo",
+							"value": "Jared",
 							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "jestrada",
+							"type": "text",
+							"disabled": true
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:2636/67b29a1571bd46732bb0c6b3",
+					"raw": "localhost:2636/user/67c60e6b5f1b3d0863e96d46",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
-						"67b29a1571bd46732bb0c6b3"
+						"user",
+						"67c60e6b5f1b3d0863e96d46"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -227,7 +217,7 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
@@ -245,45 +235,13 @@
 			"response": []
 		},
 		{
-			"name": "GetCategory",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
-					"host": [
-						"localhost"
-					],
-					"port": "2636",
-					"path": [
-						"category",
-						"67b2a050cdf46ea0096c95af"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "AddCategory",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
@@ -292,18 +250,19 @@
 					"urlencoded": [
 						{
 							"key": "description",
-							"value": "Muebles",
+							"value": "Muebleria",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:2636/add",
+					"raw": "localhost:2636/category/add",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
+						"category",
 						"add"
 					]
 				}
@@ -317,19 +276,51 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:2636/categories/categories",
+					"raw": "localhost:2636/category/",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
-						"categories",
-						"categories"
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategoryById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/category/67c611e01e6982ad53d61df1",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"category",
+						"67c611e01e6982ad53d61df1"
 					]
 				}
 			},
@@ -342,7 +333,7 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
@@ -351,20 +342,20 @@
 					"urlencoded": [
 						{
 							"key": "description",
-							"value": "Comida",
+							"value": "Articulos generales de limpieza",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
+					"raw": "localhost:2636/category/67c611e01e6982ad53d61df1",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
 						"category",
-						"67b2a050cdf46ea0096c95af"
+						"67c611e01e6982ad53d61df1"
 					]
 				}
 			},
@@ -377,7 +368,7 @@
 				"header": [
 					{
 						"key": "authorizathion",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyOWExNTcxYmQ0NjczMmJiMGM2YjMiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzk3NTg1MDUsImV4cCI6MTczOTc2OTMwNX0.vWKUlp87LWniXmydySemNczSkMwyX4VzgWUCBs0inxA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
 						"type": "text"
 					}
 				],
@@ -386,14 +377,405 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "localhost:2636/category/67b2a050cdf46ea0096c95af",
+					"raw": "localhost:2636/category/67c611eb1e6982ad53d61df3",
 					"host": [
 						"localhost"
 					],
 					"port": "2636",
 					"path": [
 						"category",
-						"67b2a050cdf46ea0096c95af"
+						"67c611eb1e6982ad53d61df3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Desinfectante",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Desinfecante Fabuloso",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "67c614651e6982ad53d61e08",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/product/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MwY2Q5MjYzMTVkOGUxZDBlMTg5YTEiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MDY4ODgwNCwiZXhwIjoxNzQwNjk5NjA0fQ.HNxjfklJPEk1OEo8THpyjIlIkxAPVYcf73hNFwZdAVU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/product/67c0ce016315d8e1d0e189a6",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"product",
+						"67c0ce016315d8e1d0e189a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MwY2Q5MjYzMTVkOGUxZDBlMTg5YTEiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MDY4ODgwNCwiZXhwIjoxNzQwNjk5NjA0fQ.HNxjfklJPEk1OEo8THpyjIlIkxAPVYcf73hNFwZdAVU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Desinfectante Magia Blanca",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/product/67c0ce016315d8e1d0e189a6",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"product",
+						"67c0ce016315d8e1d0e189a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MGU2YjVmMWIzZDA4NjNlOTZkNDYiLCJ1c2VybmFtZSI6InBvbGl2YSIsIm5hbWUiOiJQYWJsbyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTAzMzE4NSwiZXhwIjoxNzQxMDQzOTg1fQ.lPVvapBqmvRAYEgMaUERpgxOobcUv0TRB1zTbQOmtM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:2636/product/67c613f21e6982ad53d61e00",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"product",
+						"67c613f21e6982ad53d61e00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToShoppingCart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product",
+							"value": "67c65369c6b267e326219547",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/shop/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"shop",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/shop/",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"shop",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteToCart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/shop/67c65369c6b267e326219547",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"shop",
+						"67c65369c6b267e326219547"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateToCart",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "quantity",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/shop/67c65369c6b267e326219547",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"shop",
+						"67c65369c6b267e326219547"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPurchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "paymentMethod",
+							"value": "Credit Card",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/buy/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"buy",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "paymentMethod",
+							"value": "Credit Card",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/buy/add",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"buy",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generadorDeFactura",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorizathion",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NTMzNWRmNjFmNDQ2ZTRlYjAyZWEiLCJ1c2VybmFtZSI6InN2ZWxpeiIsIm5hbWUiOiJTZWJhc3RpYW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDEwNTA2OTksImV4cCI6MTc0MTA2MTQ5OX0.yjz1YFp75CW9EYZ0TtsHw9TYNw_ir-cOPMc0Ssx-5to",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/shop/",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"shop",
+						""
 					]
 				}
 			},

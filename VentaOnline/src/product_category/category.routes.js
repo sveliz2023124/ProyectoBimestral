@@ -4,15 +4,15 @@ import {
     deleteCategory,
     getCategory,
     getCategoryById,
-    update,
+    updateCategory,
 } from './category.controller.js'
 import {validateJwt } from '../../middlewares/validate.jwt.js'
 
 const api = Router()
 
 api.post('/add', [validateJwt],add)
-api.get('/categories/categories',[validateJwt] ,getCategory)
-api.get('/category/:id', [validateJwt], getCategoryById)
-api.put('/category/:id',[validateJwt], update)
-api.delete('/category/:id', [validateJwt], deleteCategory)
+api.get('/',[validateJwt] ,getCategory)
+api.get('/:id', [validateJwt], getCategoryById)
+api.put('/:id',[validateJwt], updateCategory)
+api.delete('/:id', [validateJwt], deleteCategory)
 export default api

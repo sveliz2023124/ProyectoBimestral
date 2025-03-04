@@ -1,34 +1,32 @@
-'use strict'
-
 import express from 'express'
-import morgan from 'morgan'
 import cors from 'cors'
-import helmet from 'helmet' 
-
+import helmet from 'helmet'
+import morgan from 'morgan'
+import { config } from 'dotenv'
 import userRoutes from '../src/users/user.routes.js'
 import categoryRoutes from '../src/product_category/category.routes.js'
+import productRoutes from '../src/products/product.routes.js'
+import shoppingCarRoutes from '../src/shopCar/shopCar.routes.js'
+import purchaseRouter from '../src/purchase/purchase.routes.js'
 
-const configs = (app)=>{
-    app.use(express.json())
-    app.use(express.urlencoded({extended: true}))
-    app.use(cors())
-    app.use(helmet())
-    app.use(morgan('dev'))
-}
+const app = express() 
+config()
+const port = process.env.PORT
 
-const routes = (app)=>{
-    app.use(userRoutes)
-    app.use(categoryRoutes)
-}
 
-export const initServer = ()=>{
-    const app = express()
-    try{
-        configs(app)
-        routes(app)
-        app.listen(process.env.PORT)
-        console.log(`Server running in port ${process.env.PORT}`)
-    }catch(e){
-        console.log('Server init failed', e)
-    }
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+app.use(cors())
+app.use(helmet())
+app.use(morgan('dev'))
+
+app.use("/user", userRoutes)
+app.use('/category', categoryRoutes)
+app.use('/product', productRoutes)
+app.use('/shop', shoppingCarRoutes)
+app.use('/buy', purchaseRouter)
+
+export const InitServer = ()=>{
+    app.listen(port)
+    console.log(`Server HTTPS is running in port ${port}`)
 }

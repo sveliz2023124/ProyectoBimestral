@@ -1,7 +1,8 @@
 import { body } from "express-validator"
-import { existEmail, existUsername, notRequiredField } from "../utils/db.validators"
-import { validateErrors, validateErrorsWhitoutFiles } from "./validate.errors"
+import {existEmail, existUsername, notRequiredField, objetctIdValid } from "../utils/db.validators.js"
+import { validateErrors, validateErrorsWhitoutFiles } from "./validate.errors.js"
 
+//Usuario
 export const registerValidator = [
     body('name', 'Name cannot be empty')
         .notEmpty(),
@@ -13,17 +14,17 @@ export const registerValidator = [
     body('email', 'Email cannot be empty')
         .notEmpty()
         .isEmail()
-        .custom(existEmail),
+        .custom(existEmail),    
     body('username', 'Username cannot be empty')
         .notEmpty()
         .toLowerCase()
         .custom(existUsername),
-    body('password', 'Password canno be empty')
+    body('password', 'Password cannot be empty')
         .notEmpty()
         .isStrongPassword()
         .withMessage('Passwrod must be strong')
         .isLength({min:8})
-        .withMessage('Password ne min 8 chacarcters'),
+        .withMessage('Password be min 8 chacarcters'),
     body('phone', 'Phone cannot be empty')
         .notEmpty()
         .isMobilePhone(),
@@ -50,5 +51,24 @@ export const updateUSerValidator = [
     body('role')
         .optional()
         .custom(notRequiredField),
-        validateErrorsWhitoutFiles
+    validateErrorsWhitoutFiles
+]
+
+//Categoria
+
+//Producto
+export const addProduct = [
+    body('name', 'Name cannot be empty')
+        .notEmpty(),
+    body('description', 'Description cannot be empty')
+        .notEmpty()
+        .isLength({max:50}),
+    body('price','Price cannot be empty')
+        .notEmpty(),
+    body('category','Category not exist')
+        .notEmpty()
+        .custom(objetctIdValid),
+    body('stock','Stock cannot be empty')
+        .notEmpty(),
+    validateErrors
 ]

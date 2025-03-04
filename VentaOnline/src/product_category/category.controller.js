@@ -42,19 +42,20 @@ export const getCategory = async(req,res)=>{
                     }
                 )
             }
-            return res.status(404).send(
+            return res.send(
                 {
-                    succes: false,
+                    succes: true,
                     message: 'Category found',
                     category
-            }
-        )
+                }
+            )
     }catch(e){
         console.error(e)
         return res.status(500).send(
             {
                 success: false,
-                message: 'General error'
+                message: 'General error',
+                e
             }
         )
     }
@@ -72,8 +73,8 @@ export const getCategoryById = async(req, res)=>{
         )
         return res.send(
             {
-                succes: false,
-                message: 'Category found: ', 
+                succes: true,
+                message: 'Category found', 
                 category
             }
         )
@@ -89,7 +90,7 @@ export const getCategoryById = async(req, res)=>{
     }
 }
 
-export const update = async (req,res)=>{
+export const updateCategory = async (req,res)=>{
     try{
         let data = req.body
         let{id} = req.params
@@ -102,8 +103,8 @@ export const update = async (req,res)=>{
         )
         return res.send(
             {
-                success: false,
-                message: 'Category updated',
+                success: true,
+                message: 'Category updated successfully',
                 category
             }   
         )

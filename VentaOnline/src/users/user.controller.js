@@ -121,7 +121,7 @@ export const getUserById = async(req, res)=>{
 export const update = async (req,res)=>{
     try{
         let data = req.body
-        let{id} = req.params
+        let {id} = req.params
         let user = await User.findByIdAndUpdate(id, data, {new: true})
         if(!user) return res.status(404).send(
             {
@@ -131,7 +131,7 @@ export const update = async (req,res)=>{
         )
         return res.send(
             {
-                success: false,
+                success: true,
                 message: 'User updated',
                 user
             }   
